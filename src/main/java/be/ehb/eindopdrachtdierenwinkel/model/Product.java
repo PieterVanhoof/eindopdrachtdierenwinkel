@@ -15,9 +15,13 @@ public class Product {
     private double prijs;
     private String categorie;
     private String omschrijving;
+    private String afbeelding;
 
     public Product() {
     }
+    public String getAfbeelding() {return afbeelding; }
+
+    public void setAfbeelding(String afbeelding) {this.afbeelding = afbeelding;}
 
     public String getOmschrijving() { return omschrijving; }
 

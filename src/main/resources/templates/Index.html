@@ -24,6 +24,7 @@
             <p th:text="${Product.productNaam}"></p>
             <p th:text="${Product.prijs }"></p>
             <p th:text="${Product.categorie}"></p>
+            <img th:src="${Product.afbeelding}"></img>
             <a class="btn" th:href="@{/Details/{id}(id = ${Product.id})}">Details</a>
         </div>
     </div>
