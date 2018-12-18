@@ -22,9 +22,8 @@
     <div class="row">
         <div class="col-sm-4" th:each="Product :${all}">
             <p th:text="${Product.productNaam}"></p>
-            <p th:text="${Product.prijs}"></p>
+            <p th:text="${Product.prijs }"></p>
             <p th:text="${Product.categorie}"></p>
-            <p th:text="${Product.omschrijving}"></p>
             <a class="btn" th:href="@{/Details/{id}(id = ${Product.id})}">Details</a>
         </div>
     </div>
