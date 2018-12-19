@@ -24,11 +24,14 @@
 
     </ul>
 </nav>
-<div id="content" class="container">
-    
-    <p th:text="${Product.productNaam}"></p>
-    <p th:text="${Product.prijs }"></p>
-    <img th:src="${Product.afbeelding}"></img>
+
+<div class="container" th:object="${product}">
+    <br>
+    <br>
+    <br>
+    <p th:text="*{productNaam}"></p>
+    <p th:text="${product.prijs }"></p>
+    <img th:src="${product.afbeelding}"></img>
 </div>
 
 
