@@ -26,7 +26,7 @@
 </nav>
 
 
-²<div id="container" class="container-fluid">
+<div id="container" class="container-fluid">
     <div class="row">
         <div class="col-sm-4" th:each="Product :${all}">
             <p th:text="${Product.productNaam}"></p>
@@ -38,6 +38,9 @@
         </div>
     </div>
 </div>
+
+<a th:href="@{~/index/voeding}">foods</a>
+
 
 </body>
 </html>
