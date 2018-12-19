@@ -29,9 +29,11 @@
     <br>
     <br>
     <br>
+    <img th:src="${product.afbeelding}"></img>
     <p th:text="*{productNaam}"></p>
     <p th:text="${product.prijs }"></p>
-    <img th:src="${product.afbeelding}"></img>
+    <p th:text="*{omschrijving}"></p>
+
 </div>
 
 

@@ -9,7 +9,6 @@
 }
 #container {
     padding-top: 60px;
-    padding-left: 10%;
     padding-right: 0;
     margin: 0;
 }
@@ -44,4 +43,9 @@ nav{
     width: 120px;
     height: 120px;
 }
+.container img{
+    width: 200px;
+    height: 200px;
+    float: left;
 
+}
