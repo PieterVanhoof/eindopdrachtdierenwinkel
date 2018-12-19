@@ -15,9 +15,9 @@ public class DetailsController {
     ProductRepository repo;
 
     @RequestMapping(value = "/Details/{id}", method = RequestMethod.GET)
-    public String showDetailsForID(ModelMap map, @PathVariable(value = "id") int id){
+    public String showDetailsForID(ModelMap map, @PathVariable(value = "id") int id) {
 
-        Product p= repo.findById(id).get();
+        Product p = repo.findById(id).get();
         map.addAttribute("product", p);
 
         return "Details";
