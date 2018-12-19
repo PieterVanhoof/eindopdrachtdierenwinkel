@@ -40,3 +40,8 @@ nav{
     border: black 1px solid;
 
 }
+.col-sm-4 img{
+    width: 120px;
+    height: 120px;
+}
+}

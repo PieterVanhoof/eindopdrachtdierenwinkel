@@ -18,7 +18,7 @@ public class DetailsController {
     public String showDetailsForID(ModelMap map, @PathVariable(value = "id") int id){
 
         Product p= repo.findById(id).get();
-        map.addAttribute("product", p);
+        map.addAttribute("productNaam", p);
 
         return "Details";
     }

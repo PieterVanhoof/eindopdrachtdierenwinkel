@@ -22,7 +22,6 @@
 <nav th:fragment="navigation">
     <ul>
         <li><a th:href="@{~/index}">Tim&Jeffrey's pet imporium</a></li>
-
     </ul>
 </nav>
 
@@ -34,6 +33,7 @@
             <p th:text="${Product.categorie}"></p>
             <img th:src="${Product.afbeelding}"></img>
             <a class="btn" th:href="@{/Details/{id}(id = ${Product.id})}">Details</a>
+
         </div>
     </div>
 </div>
