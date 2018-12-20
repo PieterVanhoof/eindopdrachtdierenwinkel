@@ -30,5 +30,45 @@
     <td th:text="${Product.prijs}"></td>
     <td th:text="${Product.categorie}"></td>
 </tr>
+
+
+    <div id="inhoud">
+        <form>
+            <div>
+                <label for="naam">Naam</label>
+                <input type="text" id="naam" placeholder="e.g. Shrek"> <span> Type name</span>
+            </div>
+
+            <div>
+                <label for="email">Email: </label>
+                <input type="text" id="email" placeholder="e.g. LordOfTheSwamp@gmail.com"> <span> Type Email</span>
+            </div>
+
+            <div>
+                <label for="adres">Adres</label>
+                <input type="text" id="adres" placeholder="Typeadreshere"> <span> Type password</span>
+            </div>
+
+            <div>
+                <label for="bus">bus</label>
+                <input type="text"id="bus"placeholder="e.g. c4"> <span> Repeat password</span>
+            </div>
+            <div>
+                <label for="postcode">Postcode</label>
+                <input type="int" id="postcode" placeholder="e.g. 1000"> <span> Type password</span>
+            </div>
+            <div>
+                <label for="woonplaats">Woonplaats</label>
+                <input type="text" id="woonplaats" placeholder="Woonplaats"> <span> Type password</span>
+            </div>
+
+
+            <input id="button" type="submit" value="Submit">
+
+
+        </form>
+
+    </div>
+</div>
 </body>
 </html>
