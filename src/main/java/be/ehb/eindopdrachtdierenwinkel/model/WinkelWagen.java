@@ -16,11 +16,15 @@ public class WinkelWagen {
     //own stuff
     private ArrayList<Product> cart = new ArrayList<>();
 
-    public ArrayList<Product> getCart() {
+    public ArrayList<Product> getCart()
+    {
         return cart;
     }
-
     public void addProduct(Product p){
         cart.add(p);
     }
+    public void delProduct(Product p){
+        cart.remove(p);
+    }
 }
+

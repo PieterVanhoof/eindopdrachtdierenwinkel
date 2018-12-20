@@ -34,5 +34,11 @@ public class WinkelwagenController {
         map.addAttribute("cart", WinkelWagen.getInstance().getCart());
         return "Winkelwagen";
     }
-
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    public String delete( @PathVariable(value = "id") int id){
+        Product p = repo.findById(id).get();
+        WinkelWagen.getInstance().delProduct(p);
+        return "redirect:/Winkelwagen";
+    }
 }
+    

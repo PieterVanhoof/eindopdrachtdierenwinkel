@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"
-      xmlns:th="http:www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Winkelwagen</title>
@@ -22,13 +22,15 @@
 <body>
 <nav th:include="~{index::navigation}">
 </nav>
-<br>
-<br>
-<br>
+<br><br>
+
 <tr th:each="Product : ${cart}">
     <td th:text="${Product.productNaam}"></td>
     <td th:text="${Product.prijs}"></td>
     <td th:text="${Product.categorie}"></td>
+
+
 </tr>
+
 </body>
 </html>
