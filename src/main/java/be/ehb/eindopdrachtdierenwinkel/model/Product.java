@@ -19,13 +19,22 @@ public class Product {
 
     public Product() {
     }
-    public String getAfbeelding() {return afbeelding; }
 
-    public void setAfbeelding(String afbeelding) {this.afbeelding = afbeelding;}
+    public String getAfbeelding() {
+        return afbeelding;
+    }
 
-    public String getOmschrijving() { return omschrijving; }
+    public void setAfbeelding(String afbeelding) {
+        this.afbeelding = afbeelding;
+    }
 
-    public void setOmschrijving(String omschrijving) { this.omschrijving = omschrijving; }
+    public String getOmschrijving() {
+        return omschrijving;
+    }
+
+    public void setOmschrijving(String omschrijving) {
+        this.omschrijving = omschrijving;
+    }
 
     public int getId() {
         return id;

@@ -1,4 +1,4 @@
 package be.ehb.eindopdrachtdierenwinkel.model;
 
-public class Cart {
+public class Winkelwagen {
 }

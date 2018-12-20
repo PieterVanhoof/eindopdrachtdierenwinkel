@@ -7,20 +7,14 @@
     text-align: center;
     height: 150px;
 }
+
 #container {
     padding-top: 60px;
     padding-right: 0;
     margin: 0;
 }
 
-
-
-
-
-
-
-
-nav{
+nav {
     height: 60px;
     background-color: cornflowerblue;
     color: #ffffff;
@@ -30,22 +24,45 @@ nav{
     top: 0;
     z-index: 100000;
     padding-left: 50px;
+    text-decoration: none;
 }
-.row div:nth-child(odd){
+
+.row div:nth-child(odd) {
     border: gray 1px solid;
 
 }
-.row div:nth-child(even){
+
+.row div:nth-child(even) {
     border: black 1px solid;
 
 }
-.col-sm-4 img{
+
+.col-sm-4 img {
     width: 120px;
     height: 120px;
 }
-.container img{
+
+.container img {
     width: 200px;
     height: 200px;
     float: left;
 
 }
+nav ul li {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Bauhaus 93";
+}
+nav ul li a{
+    padding-left: 10px;
+    text-decoration: none;
+    color: black;
+
+}
+.btn {
+    color: orange;
+    text-decoration: none;
+}
+

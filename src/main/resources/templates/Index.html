@@ -21,7 +21,10 @@
 <body>
 <nav th:fragment="navigation">
     <ul>
-        <li><a th:href="@{~/index}">Tim&Jeffrey's pet imporium</a></li>
+   <li><a th:href="@{~/index}">Tim&Jeffrey's pet imporium</a></li>
+    <li><a th:href="@{~/index/voeding}">foods</a></li>
+    <li><a th:href="@{~/index/habitat}">habitat</a></li>
+        <li><a th:href="@{~/index/speelgoed}">speelgoed</a></li>
     </ul>
 </nav>
 
@@ -39,9 +42,7 @@
     </div>
 </div>
 
-<a th:href="@{~/index/voeding}">Voeding</a>
-<a th:href="@{~/index/habitat}">Habitats</a>
-<a th:href="@{~/index/Speelgoed}">Speelgoed</a>
+
 
 
 </body>
