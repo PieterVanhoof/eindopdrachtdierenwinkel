@@ -16,7 +16,7 @@ public class WinkelwagenController {
     @Autowired
     private ProductRepository repo;
 
-    @RequestMapping(value = "/Winkelwagen)", method = RequestMethod.GET)
+    @RequestMapping(value = "/winkelwagen", method = RequestMethod.GET)
     public String getCart(ModelMap map) {
 
         map.addAttribute("cart", WinkelWagen.getInstance().getCart());
@@ -24,7 +24,7 @@ public class WinkelwagenController {
         return "Winkelwagen";
     }
 
-    @RequestMapping(value = "Winkelwagen/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/winkelwagen/{id}", method = RequestMethod.GET)
     public String AddToCart(ModelMap map, @PathVariable(name = "id") int id ) {
 
         Product p = repo.findById(id).get();

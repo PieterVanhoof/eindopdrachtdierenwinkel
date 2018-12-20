@@ -28,9 +28,7 @@
     <li><a th:href="@{~/index/voeding}">foods</a></li>
     <li><a th:href="@{~/index/habitat}">habitat</a></li>
         <li><a th:href="@{~/index/speelgoed}">speelgoed</a></li>
-        <li><a th:href="@{~/index/Winkelwagen}"><i class="fas fa-shopping-cart"></i></a></li>
-
-
+        <li><a th:href="@{~/winkelwagen}"><i class="fas fa-shopping-cart"></i></a></li>
     </ul>
 </nav>
 
@@ -43,6 +41,8 @@
             <p th:text="${Product.categorie}"></p>
             <img th:src="${Product.afbeelding}"></img>
             <a class="btn" th:href="@{/Details/{id}(id = ${Product.id})}">Details</a>
+            <a class="btn" th:href="@{~/winkelwagen/{id}(id=${Product.id})}">Add to cart</a>
+
 
         </div>
     </div>
