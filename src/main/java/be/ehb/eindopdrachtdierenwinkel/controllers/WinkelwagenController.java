@@ -24,11 +24,15 @@ public class WinkelwagenController {
         return "Winkelwagen";
     }
 
-    @RequestMapping(value = "Winkelwagen", method = RequestMethod.GET)
-    public String AddToCart(ModelMap map) {
+    @RequestMapping(value = "Winkelwagen/{id}", method = RequestMethod.GET)
+    public String AddToCart(ModelMap map, @PathVariable(name = "id") int id ) {
+
+        Product p = repo.findById(id).get();
+        WinkelWagen.getInstance().addProduct(p);
 
 
-        return "Details";
+        map.addAttribute("cart", WinkelWagen.getInstance().getCart());
+        return "Winkelwagen";
     }
 
 }

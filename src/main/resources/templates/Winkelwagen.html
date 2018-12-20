@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"
-xmlns:th="http:www.thymeleaf.org">
+      xmlns:th="http:www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Winkelwagen</title>
@@ -25,12 +25,14 @@ xmlns:th="http:www.thymeleaf.org">
         <li><a th:href="@{~/index/voeding}">foods</a></li>
         <li><a th:href="@{~/index/habitat}">habitat</a></li>
         <li><a th:href="@{~/index/speelgoed}">speelgoed</a></li>
-
-
-
     </ul>
 </nav>
+<br>
+<br>
+<br>
 
-<p th:text="${cart}"></p>
+<h1 th:text="${cart}"></h1>
+
+
 </body>
 </html>
