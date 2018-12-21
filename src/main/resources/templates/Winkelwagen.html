@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Winkelwagen</title>
     <link rel="stylesheet" th:href="@{/main.css}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -28,47 +29,48 @@
     <td th:text="${Product.productNaam}"></td>
     <td th:text="${Product.prijs}"></td>
     <td th:text="${Product.categorie}"></td>
-    <a class="btn" th:href="@{~/delete/{id}(id = ${Product.id})}" onclick="return confirm('Confirm, please.');">Delete</a>
+    <a class="btn" th:href="@{~/delete/{id}(id = ${Product.id})}"
+       onclick="return confirm('Confirm, please.');">Delete</a>
 </tr>
 
 
-    <div id="inhoud">
-        <form>
-            <div>
-                <label for="naam">Naam</label>
-                <input type="text" id="naam" placeholder="e.g. Shrek">
-            </div>
+<div id="inhoud">
+    <form>
+        <div>
+            <label for="naam">Naam</label>
+            <input type="text" id="naam" placeholder="e.g. Shrek">
+        </div>
 
-            <div>
-                <label for="email">Email</label>
-                <input type="text" id="email" placeholder="e.g. LordOfTheSwamp@gmail.com">
-            </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="e.g. LordOfTheSwamp@gmail.com">
+        </div>
 
-            <div>
-                <label for="adres">Adres</label>
-                <input type="text" id="adres" placeholder="Typeadreshere">
-            </div>
+        <div>
+            <label for="adres">Adres</label>
+            <input type="text" id="adres" placeholder="Typeadreshere">
+        </div>
 
-            <div>
-                <label for="bus">bus</label>
-                <input type="text"id="bus"placeholder="e.g. c4">
-            </div>
-            <div>
-                <label for="postcode">Postcode</label>
-                <input type="int" id="postcode" placeholder="e.g. 1000">
-            </div>
-            <div>
-                <label for="woonplaats">Woonplaats</label>
-                <input type="text" id="woonplaats" placeholder="Woonplaats">
-            </div>
-
-
-            <input id="button" type="submit" value="Submit" onclick="return confirm('Confirm, please.');">
+        <div>
+            <label for="bus">bus</label>
+            <input type="text" id="bus" placeholder="e.g. c4">
+        </div>
+        <div>
+            <label for="postcode">Postcode</label>
+            <input type="int" id="postcode" placeholder="e.g. 1000">
+        </div>
+        <div>
+            <label for="woonplaats">Woonplaats</label>
+            <input type="text" id="woonplaats" placeholder="Woonplaats">
+        </div>
 
 
-        </form>
+        <input id="button" type="submit" value="Submit" onclick="return confirm('Confirm, please.');">
 
-    </div>
+
+    </form>
+
+</div>
 </div>
 </body>
 </html>

@@ -5,6 +5,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+
 //classe gebruiker voor het invul formulier
 public class Gebruiker {
     @Id

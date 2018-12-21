@@ -17,16 +17,20 @@ import javax.persistence.Query;
 public class IndexController {
     @Autowired
     private ProductRepository repo;
+
     //manier waarmee we alle producten weergewen op de indexpagina
     @ModelAttribute("all")
-    public Iterable<Product> findAll(){return repo.findAll();}
-    @RequestMapping(value = {"/index","/"},method = RequestMethod.GET)
+    public Iterable<Product> findAll() {
+        return repo.findAll();
+    }
+
+    @RequestMapping(value = {"/index", "/"}, method = RequestMethod.GET)
     public String showIndex(ModelMap map) {
         return "index";
     }
 
     //manier waarop we filteren op categore
-    @RequestMapping(value = {"/index/{cat}"},method = RequestMethod.GET)
+    @RequestMapping(value = {"/index/{cat}"}, method = RequestMethod.GET)
     public String showIndexCategorie(ModelMap map, @PathVariable(value = "cat") String cat) {
 
         map.addAttribute("all", repo.findByCategorieIgnoreCase(cat));

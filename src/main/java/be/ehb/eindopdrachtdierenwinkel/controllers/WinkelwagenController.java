@@ -16,6 +16,7 @@ import java.util.List;
 public class WinkelwagenController {
     @Autowired
     private ProductRepository repo;
+
     //manier waarmee we de winkelwagen aanmaken
     @RequestMapping(value = "/winkelwagen", method = RequestMethod.GET)
     public String getCart(ModelMap map) {
@@ -24,6 +25,7 @@ public class WinkelwagenController {
 
         return "Winkelwagen";
     }
+
     //methode waarmee we producten op id naar de winkelwagen sturen
     @RequestMapping(value = "/winkelwagen/{id}", method = RequestMethod.GET)
     public String AddToCart(ModelMap map, @PathVariable(name = "id") int id) {
