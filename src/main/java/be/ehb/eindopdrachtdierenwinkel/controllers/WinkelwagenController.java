@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +16,7 @@ import java.util.List;
 public class WinkelwagenController {
     @Autowired
     private ProductRepository repo;
-
+    //manier waarmee we de winkelwagen aanmaken
     @RequestMapping(value = "/winkelwagen", method = RequestMethod.GET)
     public String getCart(ModelMap map) {
 
@@ -23,22 +24,26 @@ public class WinkelwagenController {
 
         return "Winkelwagen";
     }
-
+    //methode waarmee we producten op id naar de winkelwagen sturen
     @RequestMapping(value = "/winkelwagen/{id}", method = RequestMethod.GET)
-    public String AddToCart(ModelMap map, @PathVariable(name = "id") int id ) {
+    public String AddToCart(ModelMap map, @PathVariable(name = "id") int id) {
 
         Product p = repo.findById(id).get();
         WinkelWagen.getInstance().addProduct(p);
 
 
         map.addAttribute("cart", WinkelWagen.getInstance().getCart());
-        return "Winkelwagen";
+        return "redirect:/winkelwagen";
     }
+
+    //methode waarop we op id dingen verweideren uit de winkelwagen
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
-    public String delete( @PathVariable(value = "id") int id){
+    public String delete(@PathVariable(value = "id") int id) {
         Product p = repo.findById(id).get();
         WinkelWagen.getInstance().delProduct(p);
-        return "redirect:/Winkelwagen";
+        return "redirect:/winkelwagen";
     }
 }
-    
+
+
+

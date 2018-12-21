@@ -1,11 +1,26 @@
 package be.ehb.eindopdrachtdierenwinkel.model;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+//classe gebruiker voor het invul formulier
 public class Gebruiker {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @NotBlank(message = "{validation.post}")
     private int naam;
+    @NotBlank(message = "{validation.post}")
+    @Size(min = 4, max = 20, message = "{validation.email}")
     private String email;
+    @NotBlank(message = "{validation.post}")
     private String adres;
+    @NotBlank(message = "{validation.post}")
     private String bus;
+    @NotBlank(message = "{validation.post}")
     private int postcode;
+    @NotBlank(message = "{validation.post}")
     private String woonplaats;
 
     public int getNaam() {

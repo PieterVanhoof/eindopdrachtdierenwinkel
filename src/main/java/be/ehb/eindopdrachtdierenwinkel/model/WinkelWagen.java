@@ -23,8 +23,6 @@ public class WinkelWagen {
     public void addProduct(Product p){
         cart.add(p);
     }
-    public void delProduct(Product p){
-        cart.remove(p);
-    }
+    public void delProduct(Product p){ cart.remove(p); }
 }
 
